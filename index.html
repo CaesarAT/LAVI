@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Envelope + Letter (Open/Close on Click)</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>DOREMON</strong>
+                        <p>
+                            I am so sorry yrr, Ik hamesha asa toh hoga nhi ki sari cheeze sahi jaye....ups and down rehte hai chahe life ho ya do logo ke bach baat<br>
+                            IK MAI AJ KL HAL HI MEH EKDUM GAYAB HU BHOUT SARE SAVAL TUMAHRE MAN MEH ARHE HOGE uske liye soorry yrr mai puri koshis karta ki kuch galat na hi krdu pr galti kuch na kuch toh ho ji jati<br>
+                            Aur mai uske liye soorry yrr.Jo bhi baat ho we can talk through it. I AM SORRY YRR MADAM JI.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+    <script>
+       const envelope = document.querySelector('.envelope-wrapper');
+
+    // Open/close on click
+    envelope.addEventListener('click', () => {
+        envelope.classList.toggle('flap');
+    });
+
+    // Auto-open on mobile devices
+    if (/Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent)) {
+        envelope.classList.add('flap');
+    }
+    </script>
+</body>
+</html>
